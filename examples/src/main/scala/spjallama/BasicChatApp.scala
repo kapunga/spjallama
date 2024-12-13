@@ -4,7 +4,7 @@ import cats.effect.{IO, IOApp}
 import cats.effect.std.Console
 import spjallama.client.SyncOllamaClient
 import spjallama.client.model.{ChatRequest, Message}
-import spjallama.core.Model.Llama3_2
+import spjallama.core.Model.Mistral
 
 object BasicChatApp extends IOApp.Simple:
   override def run: IO[Unit] =
@@ -21,7 +21,7 @@ object BasicChatApp extends IOApp.Simple:
           // Append the user message to the conversation log.
           val updatedMsgs = msgs.appended(userMsg)
           // Build the request
-          val req = ChatRequest(model = Llama3_2, messages = updatedMsgs)
+          val req = ChatRequest(model = Mistral, messages = updatedMsgs)
           for {
             // Send the latest state of the chat to ollama.
             resp <- IO.blocking(client.chat(req)).flatMap(IO.fromEither)
