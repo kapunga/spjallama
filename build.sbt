@@ -27,6 +27,9 @@ lazy val client = (project in file("client"))
   .dependsOn(core)
 
 lazy val examples = (project in file("examples"))
+  .settings(
+    libraryDependencies ++= Libraries.fs2
+  )
   .settings(commonSettings *)
   .settings(publish / skip := true)
   .dependsOn(core, client)
