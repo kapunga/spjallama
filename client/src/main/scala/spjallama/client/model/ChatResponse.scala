@@ -21,5 +21,5 @@ case class ChatResponse(model: Model,
                         evalDuration: Option[Long])
 
 object ChatResponse:
-  implicit val customConfig: Configuration = Configuration.default.withSnakeCaseMemberNames
-  implicit val chatResponseCodec: Codec[ChatResponse] = derivedConfigured[ChatResponse]
+  given Configuration = Configuration.default.withSnakeCaseMemberNames
+  given Codec[ChatResponse] = derivedConfigured[ChatResponse]
