@@ -11,6 +11,7 @@ lazy val commonSettings = Seq(
 lazy val root = (project in file("."))
   .settings(name := "spjallama")
   .settings(commonSettings *)
+  .aggregate(core, client)
 
 lazy val core = (project in file("core"))
   .settings(
