@@ -12,7 +12,7 @@ case class InstructionBuilder(character: Option[Character] = None, modelOverride
       model <- modelOverride.orElse(character.map(_.model))
         .toRight(new RuntimeException("Can't generate conversation without a model"))
       systemPrompt = buildSystemPrompt.toList
-    } yield Conversation(model, List.empty, userName)
+    } yield Conversation(model, systemPrompt, userName)
     
   private def buildSystemPrompt: Option[Message] =
     for {
