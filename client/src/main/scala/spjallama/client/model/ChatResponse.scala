@@ -4,7 +4,7 @@ import io.circe.Codec.AsObject.derivedConfigured
 import io.circe.derivation.Configuration
 import io.circe.{Codec, Decoder, Encoder}
 import java.time.Instant
-import spjallama.core.Model
+import spjallama.core.{Message, Model}
 
 /**
  * https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion

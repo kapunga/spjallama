@@ -3,7 +3,8 @@ package spjallama
 import cats.effect.{IO, IOApp}
 import cats.effect.std.Console
 import spjallama.client.SyncOllamaClient
-import spjallama.client.model.{ChatRequest, Message}
+import spjallama.client.model.ChatRequest
+import spjallama.core.Message
 import spjallama.core.Model.Mistral
 
 object BasicChatApp extends IOApp.Simple:

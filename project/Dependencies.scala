@@ -2,6 +2,7 @@ import sbt.*
 
 object Dependencies {
   object V {
+    val cats = "2.12.0"
     val catsEffect = "3.5.4"
     val circe = "0.14.10"
     val fs2 = "3.11.0"
@@ -12,6 +13,7 @@ object Dependencies {
 
   object Libraries {
     val cats: Seq[ModuleID] = Seq(
+      "org.typelevel" %% "cats-core" % V.cats,      
       "org.typelevel" %% "cats-effect" % V.catsEffect
     )
 

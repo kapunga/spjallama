@@ -4,7 +4,7 @@ import io.circe.*
 import io.circe.Codec.AsObject.derivedConfigured
 import io.circe.derivation.Configuration
 import io.circe.generic.semiauto.*
-import spjallama.core.Model
+import spjallama.core.{Message, Model}
 
 /**
  *

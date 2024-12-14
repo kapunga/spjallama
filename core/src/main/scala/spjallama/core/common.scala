@@ -1,7 +1,7 @@
-package spjallama.client.model
+package spjallama.core
 
-import io.circe.{Decoder, DecodingFailure, Encoder, HCursor, Json}
 import io.circe.syntax.*
+import io.circe.*
 
 enum Role(val name: String):
   case System extends Role(name = "system")

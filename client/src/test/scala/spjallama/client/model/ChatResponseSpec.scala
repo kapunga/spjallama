@@ -5,7 +5,7 @@ import java.time.Instant
 import org.scalatest.EitherValues
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
-import spjallama.core.Model
+import spjallama.core.{Message, Model}
 import spjallama.core.Model.Llama3_2
 
 class ChatResponseSpec extends AnyFlatSpec with Matchers with EitherValues:
