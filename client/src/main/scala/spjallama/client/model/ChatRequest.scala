@@ -4,7 +4,7 @@ import io.circe.*
 import io.circe.Codec.AsObject.derivedConfigured
 import io.circe.derivation.Configuration
 import io.circe.generic.semiauto.*
-import spjallama.core.{Message, Model}
+import spjallama.core.{Conversation, Message, Model}
 
 /**
  *
@@ -15,3 +15,6 @@ case class ChatRequest(model: Model, messages: Seq[Message], stream: Boolean = f
 object ChatRequest:
   given Configuration = Configuration.default.withSnakeCaseMemberNames
   given Codec[ChatRequest] = derivedConfigured
+
+  def fromConversation(conversation: Conversation): ChatRequest =
+    ChatRequest(conversation.model, conversation.chat)
