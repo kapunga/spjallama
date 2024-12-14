@@ -6,6 +6,7 @@ object Dependencies {
     val circe = "0.14.10"
     val fs2 = "3.11.0"
     val scalaTest = "3.2.19"
+    val sconfig = "1.8.1"
     val sttpClient = "4.0.0-M19"
   }
 
@@ -26,6 +27,9 @@ object Dependencies {
 
     val scalaTest: Seq[ModuleID] =
       Seq("org.scalatest" %% "scalatest" % V.scalaTest % Test)
+
+    val sconfig: Seq[ModuleID] =
+      Seq("org.ekrich" %% "sconfig" % V.sconfig)
 
     val sttpClient: Seq[ModuleID] = Seq(
       "com.softwaremill.sttp.client4" %% "core" % V.sttpClient,
