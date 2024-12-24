@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
 
 lazy val core = (project in file("core"))
   .settings(
-    libraryDependencies ++= Libraries.cats ++ Libraries.circe ++ Libraries.sconfig
+    libraryDependencies ++= Libraries.cats ++ Libraries.circe ++ Libraries.fs2 ++ Libraries.sconfig
   )
   .settings(commonSettings *)
 
